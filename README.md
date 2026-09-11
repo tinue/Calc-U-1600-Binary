@@ -13,19 +13,28 @@ guarantee of stability — expect rough edges.
 
 ## What works
 
-- All three models (PC-1500, PC-1500A, PC-1600): faceplate art, resizable
-  window, model switching, Reset / ALL RESET.
-- A live-rendering LCD (dot matrix + status indicators) and clickable
-  on-screen keys.
-- Full host-keyboard typing support, including SHIFT-tapped symbols and
-  the PC-1600's digit-row second legend (`' [ ] `` { } \ ~ _ | ^`).
+The emulator itself is the same core that drives the production SwiftUI
+app — **full emulation, no limits there**: all three models (PC-1500,
+PC-1500A, PC-1600) run for real, not a simulated subset.
 
-## What's not in this prototype
+The artwork and keyboard interaction are already as good as they're going
+to get:
 
-Memory modules, presets/BASIC loading, plotters, the debugger panel,
-settings persistence, and (on macOS/Linux) any packaging/signing — those
-two platforms' builds are plain executables for people comfortable running
-one from a terminal, not double-click-ready apps.
+- Faceplate art for all three models, resizable with the window while
+  keeping correct proportions.
+- A live-rendering LCD — dot matrix plus the full status-indicator strip.
+- Clickable on-screen keys, and full host-keyboard typing support
+  (including SHIFT-tapped symbols and the PC-1600's own digit-row second
+  legend, `' [ ] `` { } \ ~ _ | ^`).
+- Model switching and Reset / ALL RESET.
+
+## Current limits
+
+Just two, for now: **no memory modules** and **no plotter**. Everything
+else — the machine you're actually typing on — is the real thing.
+
+(On macOS/Linux, the builds are also plain executables rather than
+signed, double-click-ready apps — see the platform notes below.)
 
 ## Downloads
 
