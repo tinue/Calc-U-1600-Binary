@@ -28,10 +28,33 @@ to get:
   legend, `' [ ] `` { } \ ~ _ | ^`).
 - Model switching and Reset / ALL RESET.
 
+## Memory modules
+
+Memory modules are now selectable. Two of them are the real
+[Soigeneris PC-1500 memory modules](https://www.soigeneris.com/sharp-pc-1500-memory-modules)
+— module names and firmware are used with Soigeneris's permission — and
+come with their firmware pre-installed when selected, just like the
+physical modules do.
+
+Two example presets are included under `examples/`:
+
+- `examples/setup/firmware_bootstrap_utilrm_20.pc1500a` demonstrates
+  recovering a messed-up CE-163F back to factory state. The same
+  procedure applies on original hardware.
+- `examples/maxed-out-mem.pc1600` shows a PC-1600 with fully maxed-out
+  memory. The module is pre-formatted and can't be re-initialized with
+  `INIT` from the PC-1600 ROM, because its volume tables only go up to
+  256k and this module is 512k — it was manually patched to 512k rather
+  than produced through the normal `INIT` path.
+
+The settings let you predefine a loader path for presets, and a save
+path for memory-backed modules (so a module's contents persist to a
+file of your choosing between sessions).
+
 ## Current limits
 
-Just two, for now: **no memory modules** and **no plotter**. Everything
-else — the machine you're actually typing on — is the real thing.
+Just one, for now: **no plotter**. Everything else — the machine you're
+actually typing on — is the real thing.
 
 (On macOS/Linux, the builds are also plain executables rather than
 signed, double-click-ready apps — see the platform notes below.)
