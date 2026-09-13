@@ -86,18 +86,18 @@ signed, double-click-ready apps — see the platform notes below.)
 ## Downloads
 
 Latest build (commit
-[`a7e6d09`](https://github.com/tinue/Calc-U-1600/commit/a7e6d097d999f6d4fc7ab638f3c842188366a63b)
+[`73af510`](https://github.com/tinue/Calc-U-1600/commit/73af510b508d225c2ef60ade133ae2b59b60f651)
 on the `qt6-prototype` branch):
 
 | Platform | Download | Notes |
 |---|---|---|
-| Windows (x86_64) | [Calc-U-1600-Qt6-windows-x86_64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-11-b/Calc-U-1600-Qt6-windows-x86_64.zip) | Self-contained — Qt runtime and the MSVC redistributable are bundled. Unzip anywhere and run `CalcU1600Qt.exe`. |
-| Linux (x86_64) | [Calc-U-1600-Qt6-linux-x86_64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-11-b/Calc-U-1600-Qt6-linux-x86_64.zip) | Requires Qt6 already installed (`qt6-base-dev` + `qt6-wayland` on a Wayland desktop, via apt or your distro's equivalent). Unzip, `chmod +x CalcU1600Qt`, run. |
-| Linux (arm64) | [Calc-U-1600-Qt6-linux-arm64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-11-b/Calc-U-1600-Qt6-linux-arm64.zip) | Same requirements as above (e.g. Raspberry Pi OS 64-bit). |
-| macOS (Apple Silicon) | [Calc-U-1600-Qt6-macos-arm64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-11-b/Calc-U-1600-Qt6-macos-arm64.zip) | Requires Qt6 already installed (`brew install qt`). It's a bare executable, not a `.app` — unzip, `chmod +x CalcU1600Qt`, then `xattr -d com.apple.quarantine CalcU1600Qt` (unsigned, so Gatekeeper blocks it otherwise) and run from a terminal. |
+| Windows (x86_64) | [Calc-U-1600-Qt6-windows-x86_64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-13/Calc-U-1600-Qt6-windows-x86_64.zip) | Self-contained — Qt runtime and the MSVC redistributable are bundled. Unzip anywhere and run `CalcU1600Qt.exe`. |
+| Linux (x86_64) | [Calc-U-1600-Qt6-linux-x86_64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-13/Calc-U-1600-Qt6-linux-x86_64.zip) | Requires Qt6 already installed (`qt6-base-dev` + `qt6-wayland` on a Wayland desktop, via apt or your distro's equivalent). Unzip, `chmod +x CalcU1600Qt`, run. |
+| Linux (arm64) | [Calc-U-1600-Qt6-linux-arm64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-13/Calc-U-1600-Qt6-linux-arm64.zip) | Same requirements as above (e.g. Raspberry Pi OS 64-bit). |
+| macOS (Apple Silicon) | [Calc-U-1600-Qt6-macos-arm64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-13/Calc-U-1600-Qt6-macos-arm64.zip) | Requires Qt6 already installed (`brew install qt`). It's a bare executable, not a `.app` — unzip, `chmod +x CalcU1600Qt`, then `xattr -d com.apple.quarantine CalcU1600Qt` (unsigned, so Gatekeeper blocks it otherwise) and run from a terminal. |
 
 All builds come from the same commit; see the
-[GitHub Actions run](https://github.com/tinue/Calc-U-1600/actions/runs/34589914038)
+[GitHub Actions run](https://github.com/tinue/Calc-U-1600/actions/runs/34763779040)
 that produced them.
 
 ## Feedback
