@@ -11,6 +11,18 @@ number of people can try the prototype on Linux and Windows without
 building it themselves. There is no installer, no code signing, and no
 guarantee of stability — expect rough edges.
 
+## Quick Start
+
+1. Download the build for your platform from the table below, and also
+   either grab a source-code zip of this repository or `git clone` it —
+   either way, you need it for the preset files under `examples/`.
+2. Start the emulator, then open **Settings** and set the path to the
+   preset files (the `examples/` folder from step 1) and the path for
+   the memory-card persistent files (any folder you'd like the emulator
+   to save memory-module contents to between sessions).
+3. Load the `lissajou-1600` preset to see it run — a quick first success
+   before exploring further.
+
 ## What works
 
 The emulator itself is the same core that drives the production SwiftUI
@@ -36,7 +48,7 @@ Memory modules are now selectable. Two of them are the real
 come with their firmware pre-installed when selected, just like the
 physical modules do.
 
-Two example presets are included under `examples/`:
+Example presets are included under `examples/`:
 
 - `examples/setup/firmware_bootstrap_utilrm_20.pc1500a` demonstrates
   recovering a messed-up CE-163F back to factory state. The same
@@ -46,6 +58,15 @@ Two example presets are included under `examples/`:
   `INIT` from the PC-1600 ROM, because its volume tables only go up to
   256k and this module is 512k — it was manually patched to 512k rather
   than produced through the normal `INIT` path.
+- `examples/lissajou-1500.pc1500`, `examples/lissajou-1600.pc1600` and
+  `examples/lissajou-ce150-1600.bas` (loaded via
+  `examples/lissajou-ce150.pc1600`) draw a Lissajous figure on the
+  built-in LCD or on a CE-150 plotter/printer, one per model — a quick
+  way to see graphics output working.
+- `examples/memtest_ce155.pc1500` runs a memory test against a CE-155
+  module loaded through the universal software-defined card mechanism.
+- `examples/memtest_bank.pc1500a` runs a memory test over all banks of
+  a CE-163-style banked low-16K memory module on the PC-1500A.
 
 The settings let you predefine a loader path for presets, and a save
 path for memory-backed modules (so a module's contents persist to a
@@ -53,8 +74,11 @@ file of your choosing between sessions).
 
 ## Current limits
 
-Just one, for now: **no plotter**. Everything else — the machine you're
-actually typing on — is the real thing.
+Two, for now: the **CE-158** RS-232 interface peripheral for the
+PC-1500 and PC-1500A, and the **PC-1600F** floppy disk drive, are not
+implemented. Aside from that, the core emulation itself is complete and
+accurate. Any future additions are not to the core emulation, but to the
+surroundings around it — e.g. the debug panel.
 
 (On macOS/Linux, the builds are also plain executables rather than
 signed, double-click-ready apps — see the platform notes below.)
