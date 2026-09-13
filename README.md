@@ -1,4 +1,4 @@
-# Calc-U-1600 — Qt6 prototype binaries
+# Calc-U-1600 — Qt6 binaries
 
 This repository hosts **pre-built binaries only**, for early feasibility
 testing of a Qt6/C++ port of [Calc-U-1600](https://github.com/tinue/Calc-U-1600),
