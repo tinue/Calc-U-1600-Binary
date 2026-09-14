@@ -15,8 +15,9 @@ work on your platform, and that nothing needs to be installed
 separately — no Qt6 libraries, no other runtime — the app should just
 work after downloading. Aside from that focus, everything else (see
 [Current limits](#current-limits) below) is unchanged from the previous
-build. If the package for your platform doesn't install/launch cleanly,
-that's exactly the kind of feedback this release is looking for.
+build, except for a fix for dark mode on Linux. If the package for your
+platform doesn't install/launch cleanly, that's exactly the kind of
+feedback this release is looking for.
 
 ## Quick Start
 
