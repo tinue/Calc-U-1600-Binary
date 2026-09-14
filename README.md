@@ -7,9 +7,17 @@ production app is a native SwiftUI app (macOS/iOS); this Qt6 build is a
 scoped-down prototype exploring a cross-platform (macOS/Linux/Windows) port.
 
 **The source code is not public yet.** This repo exists purely so a small
-number of people can try the prototype on Linux and Windows without
-building it themselves. There is no installer, no code signing, and no
-guarantee of stability — expect rough edges.
+number of people can try the prototype on Linux, macOS, and Windows
+without building it themselves.
+
+**This is a packaging test release.** The point of this drop is to check
+that the installer / `.dmg` / AppImage work on your platform, and that
+nothing needs to be installed separately — no Qt6 libraries, no other
+runtime — the app should just work after downloading. The emulation
+itself is unchanged from the previous build: same features, same
+limitations (see [Current limits](#current-limits) below). If the
+package for your platform doesn't install/launch cleanly, that's exactly
+the kind of feedback this release is looking for.
 
 ## Quick Start
 
@@ -80,25 +88,23 @@ implemented. Aside from that, the core emulation itself is complete and
 accurate. Any future additions are not to the core emulation, but to the
 surroundings around it — e.g. the debug panel.
 
-(On macOS/Linux, the builds are also plain executables rather than
-signed, double-click-ready apps — see the platform notes below.)
+(The macOS `.dmg` is signed and notarized; the Windows installer is not
+code-signed, so SmartScreen will warn on first launch — see the platform
+notes below.)
 
 ## Downloads
 
-Latest build (commit
-[`73af510`](https://github.com/tinue/Calc-U-1600/commit/73af510b508d225c2ef60ade133ae2b59b60f651)
-on the `qt6-prototype` branch):
+Packaging-test build, tag
+[`qt6-prototype-2026-09-14`](https://github.com/tinue/Calc-U-1600-Binary/releases/tag/qt6-prototype-2026-09-14).
+Every package below is self-contained — no Qt6 install, no other runtime
+required. Download, install/launch, done.
 
 | Platform | Download | Notes |
 |---|---|---|
-| Windows (x86_64) | [Calc-U-1600-Qt6-windows-x86_64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-13/Calc-U-1600-Qt6-windows-x86_64.zip) | Self-contained — Qt runtime and the MSVC redistributable are bundled. Unzip anywhere and run `CalcU1600Qt.exe`. |
-| Linux (x86_64) | [Calc-U-1600-Qt6-linux-x86_64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-13/Calc-U-1600-Qt6-linux-x86_64.zip) | Requires Qt6 already installed (`qt6-base-dev` + `qt6-wayland` on a Wayland desktop, via apt or your distro's equivalent). Unzip, `chmod +x CalcU1600Qt`, run. |
-| Linux (arm64) | [Calc-U-1600-Qt6-linux-arm64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-13/Calc-U-1600-Qt6-linux-arm64.zip) | Same requirements as above (e.g. Raspberry Pi OS 64-bit). |
-| macOS (Apple Silicon) | [Calc-U-1600-Qt6-macos-arm64.zip](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-13/Calc-U-1600-Qt6-macos-arm64.zip) | Requires Qt6 already installed (`brew install qt`). It's a bare executable, not a `.app` — unzip, `chmod +x CalcU1600Qt`, then `xattr -d com.apple.quarantine CalcU1600Qt` (unsigned, so Gatekeeper blocks it otherwise) and run from a terminal. |
-
-All builds come from the same commit; see the
-[GitHub Actions run](https://github.com/tinue/Calc-U-1600/actions/runs/34763779040)
-that produced them.
+| Windows (x86_64) | [Calc-U-1600-windows-x86_64.exe](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-14/Calc-U-1600-windows-x86_64.exe) | Installer — Qt runtime and the MSVC redistributable are bundled. Unsigned, so SmartScreen will warn ("More info" → "Run anyway"). |
+| Linux (x86_64) | [Calc-U-1600-linux-x86_64.AppImage](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-14/Calc-U-1600-linux-x86_64.AppImage) | Self-contained AppImage — no Qt6 install needed. Download, `chmod +x Calc-U-1600-linux-x86_64.AppImage`, run. |
+| Linux (arm64) | [Calc-U-1600-linux-aarch64.AppImage](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-14/Calc-U-1600-linux-aarch64.AppImage) | Same as above (e.g. Raspberry Pi OS 64-bit). |
+| macOS (Apple Silicon) | [Calc-U-1600-mac-aarch64.dmg](https://github.com/tinue/Calc-U-1600-Binary/releases/download/qt6-prototype-2026-09-14/Calc-U-1600-mac-aarch64.dmg) | Self-contained `.app` bundle in a `.dmg`, signed and notarized — no Qt6 install needed, no Gatekeeper warning. |
 
 ## Feedback
 
