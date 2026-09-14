@@ -1,23 +1,22 @@
-# Calc-U-1600 — Qt6 binaries
+# Calc-U-1600 — early access binaries
 
-This repository hosts **pre-built binaries only**, for early feasibility
-testing of a Qt6/C++ port of [Calc-U-1600](https://github.com/tinue/Calc-U-1600),
-a Sharp PC-1500 / PC-1500A / PC-1600 pocket-computer emulator. The
-production app is a native SwiftUI app (macOS/iOS); this Qt6 build is a
-scoped-down prototype exploring a cross-platform (macOS/Linux/Windows) port.
+This repository hosts **pre-built binaries only** of
+[Calc-U-1600](https://github.com/tinue/Calc-U-1600), an upcoming Qt6/C++
+Sharp PC-1500 / PC-1500A / PC-1600 pocket-computer emulator, built for
+Linux, macOS, and Windows.
 
 **The source code is not public yet.** This repo exists purely so a small
-number of people can try the prototype on Linux, macOS, and Windows
-without building it themselves.
+number of people can try the app without building it themselves.
 
-**This is a packaging test release.** The point of this drop is to check
-that the installer / `.dmg` / AppImage work on your platform, and that
-nothing needs to be installed separately — no Qt6 libraries, no other
-runtime — the app should just work after downloading. The emulation
-itself is unchanged from the previous build: same features, same
-limitations (see [Current limits](#current-limits) below). If the
-package for your platform doesn't install/launch cleanly, that's exactly
-the kind of feedback this release is looking for.
+**This is an early-access release** — at least beta quality, not a
+finished 1.0. Each drop tends to have a particular focus for feedback;
+this one is **packaging**: check that the installer / `.dmg` / AppImage
+work on your platform, and that nothing needs to be installed
+separately — no Qt6 libraries, no other runtime — the app should just
+work after downloading. Aside from that focus, everything else (see
+[Current limits](#current-limits) below) is unchanged from the previous
+build. If the package for your platform doesn't install/launch cleanly,
+that's exactly the kind of feedback this release is looking for.
 
 ## Quick Start
 
@@ -33,9 +32,9 @@ the kind of feedback this release is looking for.
 
 ## What works
 
-The emulator itself is the same core that drives the production SwiftUI
-app — **full emulation, no limits there**: all three models (PC-1500,
-PC-1500A, PC-1600) run for real, not a simulated subset.
+The emulator core is **full emulation, no limits there**: all three
+models (PC-1500, PC-1500A, PC-1600) run for real, not a simulated
+subset.
 
 The artwork and keyboard interaction are already as good as they're going
 to get:
@@ -108,6 +107,6 @@ required. Download, install/launch, done.
 
 ## Feedback
 
-This is a feasibility test, not a release — if you try it, bug reports and
-impressions are welcome, but please don't expect the missing features
-above to show up here without a heads-up first.
+This is early access, not a finished release — if you try it, bug
+reports and impressions are welcome, but please don't expect the missing
+features above to show up here without a heads-up first.
